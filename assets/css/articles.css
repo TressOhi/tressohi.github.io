@@ -32,7 +32,7 @@ main{
     padding: 30px 10px;
     color: #684d4d;
     text-align: center;
-    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 #navbar a:hover, #navbar a:focus{
     color: green;
