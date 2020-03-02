@@ -68,11 +68,11 @@ main{
     text-decoration: none;
     margin: 10px;
     color: #666;
+    -webkit-tap-highlight-color: transparent;
 }
 #contact-icons a:hover, 
 #contact-icons a:focus{
     color: green;
-    outline: none;
 }
 @media only screen and (max-width:860px){
     #navbar{

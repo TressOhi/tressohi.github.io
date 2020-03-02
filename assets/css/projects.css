@@ -82,6 +82,7 @@ main{
     border-radius: 100%;
     bottom: -11px;
     right: 11px;
+    -webkit-tap-highlight-color: transparent;
 }
 .link-out:hover, 
 .link-out:focus{
