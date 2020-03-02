@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 0;
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    color: black;
+    background: white;
+    z-index: 99;
+}
+#name-animation-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 50px;
+    font-family: cursive;
+    color: green;
+}
+#t{
+    animation-name: slide-in;
+    animation-duration: 1s;
+}
+#r{
+    animation-name: slide-in;
+    animation-duration: 1.2s;
+}
+#e{
+    animation-name: slide-in;
+    animation-duration: 1.4s;
+}
+#s1{
+    animation-name: slide-in;
+    animation-duration: 1.6s;
+}
+#s2{
+    animation-name: slide-in;
+    animation-duration: 1.8s;
+}
+#o{
+    animation-name: slide-in2;
+    animation-duration: 2s;
+}
+#h{
+    animation-name: slide-in2;
+    animation-duration: 2.2s;
+}
+#i{
+    animation-name: slide-in2;
+    animation-duration: 2.4s;
+}
+@keyframes slide-in{
+    0%{
+        transform: scale(0);
+        margin-bottom: -40px;
+    }
+    100%{
+        transform: scale(1);
+        margin-bottom: 0;
+    }
+}
+@keyframes slide-in2{
+    0%{
+        transform: scale(0);
+        margin-top: -40px;
+    }
+    100%{
+        transform: scale(1);
+        margin-top: 0;
+    }
+}
+main{
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url("../images/IMG_20190727_102729_2-1.jpg");
+    background-position-x: 40%;
+    background-position-y: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+#navbar{
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0px 15px 15px 0px;
+    padding: 100px 10px 0px 0px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+}
+#navbar a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 30px 10px;
+    color: green;
+    text-align: center;
+    outline: none;
+}
+#navbar a:hover, #navbar a:focus{
+    color: #f0fff8;
+    transition: .5s;
+}
+.active{
+    color: #f0fff8 !important;
+}
+#navbar a i{
+    font-size: 20px;
+    font-weight: bold;
+}
+#bio{
+    text-align: center;
+    padding: 8em;
+    margin-left: 10%;
+}
+#bio h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 0;
+}
+#bio h2{
+    font-family: 'Montserrat' sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    margin:0;
+}
+#bio p{
+    font-size: 20px;
+}
+#bio button{
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(to right, #07af05, #044201);
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+#bio button:hover, #bio button:focus{
+    border: 1px solid green;
+    background: white;
+    color: green;
+    transition: .3s;
+}
+@media only screen and (max-width:860px){
+    #navbar{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        top: unset;
+        justify-content: space-evenly;
+        padding: 0;
+        border-radius: 10px 10px 0 0;
+    }
+    #bio{
+        padding: 5em;
+        margin: 0;
+    }
+    #bio h2{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width:510px){
+    #bio{
+        padding: 2em;
+        margin: 0;
+    }
+    #bio h2{
+        font-size: 40px;
+    }
+    #bio h3{
+        font-size: 30px;
+    }
+    #bio p{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:380px){
+    #navbar a{
+        font-size: 10px;
+    }
+    #bio h2{
+        font-size: 25px;
+    }
+    #bio h3{
+        font-size: 35px;
+    }
+}
