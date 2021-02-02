@@ -1,57 +1,141 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/x-icon">
-        <link rel="icon" href="./assets/images/logo.jpg" type="image/x-icon">
-        <meta name="theme-color" content="#008000">
-        <meta name="author" content="Fortress Enebe">
-        <meta name="description" content="Portfolio Website of Fortress Enebe. A Software Developer driven with passion to efficiently develop user friendly and easy to use applications that solve real world problems and meet users need.">
-        <meta name="keywords" content="Fortress Enebe, Tress Ohi, Portfolio, Personal Website, Software Developer, Website Design and Development, Cross Platform Apps, Mobile Apps">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fortress Enebe</title>
-    </head>
-    <body onload="myfunc()">
-        <div id="loader">
-            <div id="name-animation-box">
-                <p id="t">T</p>
-                <p id="r">r</p>
-                <p id="e">e</p>
-                <p id="s1">s</p>
-                <p id="s2">s</p>
-                &nbsp;
-                <p id="o">O</p>
-                <p id="h">h</p>
-                <p id="i">i</p>
-            </div>
-        </div>
-        <main>
-            <div id="navbar">
-                <a href="./index.html" class="active"><i class="fa fa-user"></i><span>Profile</span></a>
-                <a href="./skills.html"><i class="fa fa-wrench"></i><span>Skills</span></a>
-                <a href="./projects.html"><i class="fa fa-tasks"></i><span>Projects</span></a>
-                <a href="./contact.html"><i class="fa fa-address-book"></i><span>Contact</span></a>
-                <a href="./articles.html"><i class="fa fa-edit"></i><span>Articles</span></a>
-            </div>
-            <div id="bio">
-                <h3>Hello, I'm</h3>
-                <h2>Fortress Enebe</h2>
-                <p>A Software Developer driven with passion to efficiently develop user friendly and easy to use applications <br>that solve real world problems and meet users need.</p>
-                <a href="mailto:fortressenebe@gmail.com?subject = Mail of Interest"><button>Let's Talk</button></a>
-            </div>
-        </main>
-    </body>
-    <script>
-        function myfunc(){
-            var myvar= setTimeout(show, 3600);
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="./assets/images/logo.jpg" type="image/x-icon">
+    <meta name="author" content="Fortress Enebe">
+    <meta name="description" content="Portfolio Website of Fortress Enebe. A Software Developer driven with passion to efficiently develop user friendly and easy to use applications that solve real world problems and meet users need.">
+    <meta name="keywords" content="Fortress Enebe, Tress Ohi, Portfolio, Personal Website, Software Developer, Website Design and Development, Cross Platform Apps, Mobile Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortress Enebe</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
         }
-        function show(){
-            document.getElementById("loader").style.transition="1s";
-            document.getElementById("loader").style.transform="scale(0)";
+        body{
+            margin: 0;
+            min-height: 100vh;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader{
+            padding: 3em;
+            width: 6em;
+            height: 6em;
+            border: 10px solid #c4b9b9;
+            border-top: 10px solid black;
+            border-radius: 100%;
+            margin: auto;
+            animation: spin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .main{
+            width: 60%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 7em 0;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        .avatar-img{
+            height: 15em;
+            width: 15em;
+            border-radius: 100%;
+        }
+        .desc-details{
+            margin-left: 2em;
+            font-size: 20px;
+            line-height: 2em;
+        }
+        .button{
+            font-size: 20px;
+            width: 200px;
+            height: 55px;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: .3s;
+            outline: none;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover,
+        .button:focus{
+            background: transparent;
+            color: black;
+            transition: .3s;
+        }
+        @media only screen and (max-width:1360px){
+            .main{
+                width: 75%;
+            }
+        }
+        @media only screen and (max-width:1080px){
+            .main{
+                width: 85%;
+            }
+        }
+        @media only screen and (max-width:950px){
+            .main{
+                flex-direction: column;
+            }
+            .desc-details{
+                text-align: center;
+                margin: 0;
+            }
+        }
+    </style>
+
+    <script>
+        function sett(){
+            setTimeout(showBody, 4000)
+        }
+        function showBody(){
+            document.getElementsByClassName('loader-container')[0].style.display="none"
+            document.getElementsByClassName('main')[0].style.display="flex"
         }
     </script>
-</html>
+</head>
+<body onload="sett()">
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="main">
+        <div>
+            <img class="avatar-img" src="./assets/images/avatar.jpg" alt="">
+        </div>
+        <div class="desc-details">
+            <p>Hello, my name is <b>Fortress</b> and I'm a Software Developer. I'm still working on an ideal portfolio to showcase my skillsets and some of my favourite projects 🤞 for now you should reach out to me via the button below 👇 for a little chitchat on what I can do for you. </p>
+            <a href="mailto:fortressenebe@gmail.com">
+                <button class="button">Reach Out</button>
+            </a>
+        </div>
+    </div>
+
+</body>
